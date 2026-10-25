@@ -206,7 +206,7 @@ if user["role"] == "ADMIN":
             output_path = resolve_project_output_dir(eval_output_dir_input, ROOT)
             output_path.mkdir(parents=True, exist_ok=True)
             log_path = output_path / "dashboard_evaluation.log"
-            evaluator_script = ROOT / "scripts" / "evaluate_models_on_datasets.py"
+            evaluator_script = ROOT / "scripts" / "evaluate_models.py"
             command = build_evaluation_command(
                 python_executable=sys.executable,
                 script_path=evaluator_script,
