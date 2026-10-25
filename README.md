@@ -35,6 +35,7 @@ edge_ids_prototype/
 │   ├── config_edge.yaml
 │   └── config.yaml
 ├── data/
+├── docs/
 ├── logs/
 ├── models/
 ├── results/
@@ -55,6 +56,7 @@ edge_ids_prototype/
 │   ├── auth.py
 │   ├── config_manager.py
 │   ├── config.py
+│   ├── dashboard_support.py
 │   ├── data.py
 │   ├── evaluation.py
 │   ├── experiment_evaluation.py
@@ -71,10 +73,14 @@ edge_ids_prototype/
 ├── tests/
 │   ├── test_api.py
 │   ├── test_core.py
-│   └── test_data_sampling.py
+│   ├── test_dashboard_support.py
+│   ├── test_data_sampling.py
+│   └── test_dataset_evaluationpy
+├── CHANGELOG.md
 ├── compose.yaml
 ├── Dockerfile
 ├── pyproject.toml
+├── README.md
 └── requirements.txt
 ```
 
@@ -293,7 +299,7 @@ python scripts/run_prediction.py \
 `scripts/evaluate_models.py` can be used to evaluate all models against new dataset(s) and evaluate the performance and resource metrics for each dataset run. The following is an example use case for running this script:
 
 ```bash
-python scripts/evaluate_models_on_datasets.py \
+python scripts/evaluate_models.py \
   --dataset-dir data/evaluation_datasets \
   --pattern "*.csv" \
   --output-dir results/multi_dataset_evaluation \
